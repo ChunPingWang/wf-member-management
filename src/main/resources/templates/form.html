@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+<body>
+
+<h2>Add Form</h2>
+<form action="#" th:action="@{/add}" th:object="${scoutMember}" method="post">
+    <table>
+    <tr><td>姓名</td><td><input type="text" th:field="*{name}"/></td></tr>
+    <tr><td>住家電話</td><td><input type="text" th:field="*{homePhoneNumber}"/></td></tr>
+    <tr><td>行動電話</td><td><input type="text" th:field="*{mobilePhoneNumber}"/></td></tr>
+    <tr><td colspan="2"><input type="submit"/></td></tr>
+    </table>
+</form>
+</body>
+</html>
